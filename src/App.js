@@ -15,11 +15,7 @@ import { DataProvider } from './context/DataContext';
 // import Post from './Post';
 
 function App() {
-  
-    
-  
-
-return (
+  return (
     <div className="App">
       <DataProvider>
         <Header title="Social Media App" />
@@ -27,23 +23,16 @@ return (
           
           />
           <Routes>
-                <Route path="/" element={<Home 
-                   
-                    />} />
-                <Route path="/post">
-                  <Route index element={<NewPost 
-                      />} />
-                
-                  <Route path=":id" element={<PostPage />} />
-                </Route> 
-                  
-                <Route path="/edit/:id" element={<EditPost 
-                     
-                  />} />   
+              <Route path="/" element={<Home />} />
+              <Route path="/post">
+                <Route index element={<NewPost />} />
+                <Route path=":id" element={<PostPage />} />
+              </Route> 
+              <Route path="/edit/:id" element={<EditPost />} />   
               <Route path="/about" element={ <About />} />
               <Route path="*" element={<Missing />} />
           </Routes>     
-          <Footer />
+        <Footer />
       </DataProvider>
         
     </div>
